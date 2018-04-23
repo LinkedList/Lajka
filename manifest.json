@@ -1,0 +1,23 @@
+{
+  "description": "Changes approve button to lajka",
+  "manifest_version": 2,
+  "name": "Lajka",
+  "version": "1.0",
+  "author": "Macko Martin",
+  "homepage_url": "https://github.com/LinkedList/lajka",
+  "icons": {
+    "48": "lajka.png"
+  },
+
+  "web_accessible_resources": [
+  	"lajka.png"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.gitlab.com/*/merge_requests/*"],
+      "js": ["lajka.js"]
+    }
+  ]
+
+}
